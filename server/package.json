@@ -7,9 +7,6 @@
   "execMap": {
     "ts": "ts-node"
   },
-  "compilerOptions": {
-    "outDir": "./dist"
-  },
   "dependencies": {
     "@types/express": "^4.17.18",
     "concurrently": "^8.2.1",
