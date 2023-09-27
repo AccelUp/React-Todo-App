@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "concurrently \"cd client && yarn dev\" \"cd server && yarn start\""
+  },
+  "name": "React-Todo-App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AccelUp <risetyudhaadhi16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

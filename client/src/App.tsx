@@ -3,13 +3,24 @@ import ListHeader from "./components/Home/ListHeader";
 import "./components/Input/input.css";
 
 function App() {
-  // const [message, setMessage] = useState("");
+  const [backendData, setBackendData] = useState({});
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/message")
-  //     .then((res: Response) => res.json())
-  //     .then((data) => setMessage(data.message));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:5000/api")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((backendData) => {
+        setBackendData(backendData);
+        console.log({ backendData });
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+      });
+  }, []);
 
   return (
     <>
