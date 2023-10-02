@@ -1,9 +1,8 @@
-// Update with your config settings.
-
 /**
- * @type { Object.<string, import("knex").Knex.Config> }
+ * @type { Record<string, import("knex").Knex.Config> }
  */
-export default {
+
+const knexConfigs = {
   development: {
     client: "postgresql",
     connection: "postgresql://postgres:ace16@localhost:5432/todoDB",
@@ -42,3 +41,5 @@ export default {
     },
   },
 };
+
+export default knexConfigs;
